@@ -1,6 +1,7 @@
 # THI-LaTeX-thesis-template
 ![](./images/thiRGB.jpg)
-This repository holds a working copy of Technische Hochschule Ingolstadt Universitie's (THI's) LaTeX thesis template 
+
+This repository holds a working copy of Technische Hochschule Ingolstadt University's (THI's) LaTeX thesis template 
 which can be used as quick starting point for writing your Thesis using LaTeX.
 
 # Tip for beginners
@@ -83,4 +84,3 @@ To run it do the following-
 $> chmod +x clear_misc_files.sh
 $> ./clear_misc_files.sh
 ```
-  
