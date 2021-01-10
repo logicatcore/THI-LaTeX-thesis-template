@@ -1,6 +1,6 @@
-# THI-latex-thesis-template
-This repository holds a working copy of THI Latex thesis template which can be used as quick starting point for writing 
-your Thesis in Latex.
+# THI-LaTeX-thesis-template
+![](./images/thiRGB.jpg)
+This repository holds a working copy of Technische Hochschule Ingolstadt Universitie's (THI's) LaTeX thesis template which can be used as quick starting point for writing your Thesis in LaTeX.
 
 # Tip for beginners
 I, myself didn't have any prior experience with Latex before I began to start writing my Thesis report. So, to get 
@@ -24,12 +24,12 @@ online publically available, you can fork this repository and work upon it.
 
 ```bash
 $> cd Documents
-$> git clone https://github.com/logicatcore/THI-latex-thesis-template.git
+$> git clone https://github.com/logicatcore/THI-LaTeX-thesis-template.git
 ```
 Once the files are available, the next step is to start TexMaker and build a sample pdf right away to make sure that 
 everything is working and you have your setup ready. Follow the following steps-
 * Open TexMaker
-* File > Open > Documents/THI-latex-thesis-template/thesis.tex
+* File > Open > Documents/THI-LaTeX-thesis-template/thesis.tex
 
 This opens up the main entry point to your report, if you are familiar with programming, this particular tex file is 
 similiar to the `main()` function which gets called automatically.
@@ -59,7 +59,7 @@ share with you so that you do not have to break your head all over again! As you
   present state of this thesis template which has been improved upon by me can also generate **nomenclature** page, 
   **Glossary** and **Acronym** page in the report preamble. In order to triger these couple of pages also to be built, 
   add the following command 
-  `pdflatex -synctex=1 -interaction=nonstopmode %.tex|bibtex %.aux|makeglossaries %|makeindex %.nlo -s nomencl.ist -o %.nls|pdflatex -synctex=1 -interaction=nonstopmode %.tex|pdflatex -synctex=1 -interaction=nonstopmode %.tex|evince %.pdf`
+  `pdfLaTeX -synctex=1 -interaction=nonstopmode %.tex|bibtex %.aux|makeglossaries %|makeindex %.nlo -s nomencl.ist -o %.nls|pdfLaTeX -synctex=1 -interaction=nonstopmode %.tex|pdfLaTeX -synctex=1 -interaction=nonstopmode %.tex|evince %.pdf`
   in the *User* field and use this for building your final PDF versions or use it ocasionally like after completing one
   chapter or one section.
   
