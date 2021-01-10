@@ -1,25 +1,27 @@
 # THI-LaTeX-thesis-template
 ![](./images/thiRGB.jpg)
-This repository holds a working copy of Technische Hochschule Ingolstadt Universitie's (THI's) LaTeX thesis template which can be used as quick starting point for writing your Thesis in LaTeX.
+This repository holds a working copy of Technische Hochschule Ingolstadt Universitie's (THI's) LaTeX thesis template 
+which can be used as quick starting point for writing your Thesis using LaTeX.
 
 # Tip for beginners
 I, myself didn't have any prior experience with Latex before I began to start writing my Thesis report. So, to get 
-acquainted with what Latex is all about and to learn the A, B, C, D,... of Latex I picked this excellent quick read
+acquainted with what Latex is all about and to learn the A, B, C, D,... of Latex, I picked this excellent quick read
 [book](https://www.amazon.de/gp/product/1543162649/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1) on Amazon which 
 just takes approximately **1 hour** to read from **cover-to-cover**. I highly recommend this book for beginners who do 
 not have any prior experience with Latex.
 
 # Getting started
-In my opinion one of the most difficult task is getting started easily and quickly with the tool one has to work with. 
-The reason I bring this forth here is because I had my share of difficulty getting started. From my experience I have 
-found that [TexMaker](https://www.xm1math.net/texmaker/) to be the most comfortable one which pre-installs most of the 
-standard packages required and hence streamlining the setup process.
+In my opinion one of the most difficult task is getting started easily and quickly with the tool one has to work with, 
+which is not an easy task as there are many tools available ranging from online tools like Overleaf to offline tools 
+like TexMaker and more. The reason I bring this forth here is because I had my share of difficulty getting started. 
+From my experience I have found that [TexMaker](https://www.xm1math.net/texmaker/) to be the most comfortable one 
+which pre-installs most of the standard packages required and hence streamlining the setup process.
 
 I myself have written my thesis report on Linux OS for which the TexMaker app is readily available in the ubuntu 
-app-store. But, the app is also available for Windows and MacOsX OS's, so that is comfortable if you want to follow some
- additional information regarding setup across any operating systems.
+app-store. But, the app is also available for Windows and MacOsX OS's, so, that is comfortable if you want to follow some
+ additional information that follows here regarding setup across any operating systems.
 
-To get started clone this repository to have it locally available for your use or if you are okay with having your report
+To get started, clone this repository to have it locally available for your use or if you are okay with having your report
 online publically available, you can fork this repository and work upon it.
 
 ```bash
