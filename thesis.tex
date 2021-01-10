@@ -1,0 +1,319 @@
+
+%----------------------------------------------------------------------------------
+%----Präambel/Preamble-------------------------------------------------------------
+%----------------------------------------------------------------------------------
+
+\documentclass[	a4paper,
+				11pt,
+				DIV=11,
+				bigheadings,
+				idxtotoc,
+				listof=totoc,	
+				bibtotoc,		
+				halfparskip,
+				cleardoubleempty,
+				oneside,
+				openright]{scrartcl}
+%----------------------------------------------------------------------------------
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{graphicx}	
+
+\usepackage[labelfont=bf]{caption}
+					
+\usepackage{float}
+\usepackage{wrapfig}
+%\usepackage{subfigure}
+
+\usepackage{geometry}						% Für newgeometry in Titelseite
+\geometry{a4paper,left=30mm,right=20mm}
+
+\usepackage{blindtext}
+\usepackage{layout}
+
+\PassOptionsToPackage{hyphens}{url}		
+\usepackage[pdfborder={0 0 0},
+			colorlinks=true, 
+			linkcolor=black,
+			citecolor=red,
+			]{hyperref}
+			
+\usepackage{natbib}%numbers 				
+
+\usepackage{pdfpages}
+
+\usepackage{color}
+\usepackage{xcolor}
+
+\usepackage{setspace}
+
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{colortbl}
+
+%----------------------------------------------------------------------------------
+% my addition----------------------------------------------------------------------
+%----------------------------------------------------------------------------------
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+
+\usepackage{amsmath}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\usepackage{pgf,tikz} % for drawing simple line charts
+\usepackage{breqn}
+
+\usepackage[edges]{forest}
+\usetikzlibrary{arrows.meta}
+
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text width=2.5cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{process} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=4.75cm, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=2.2cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=green!30]
+
+% additional packages can be locally accessed just by downloading the library files
+%\usepackage{./packages/algorithms/algorithm}
+%\usepackage{./packages/algorithms/algorithmic}
+
+\newcommand{\algorithmautorefname}{Algorithm}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\usepackage{multirow}
+\usepackage{subfig}
+\usepackage{adjustbox}
+\usepackage{epigraph}
+
+%----------------------------------------------------------------------------------
+%----Kopfzeile---------------------------------------------------------------------
+%----------------------------------------------------------------------------------
+
+\usepackage{scrpage2} 							% Aufruf KOMA-Skript für Kopfzeilen
+
+\pagestyle{scrheadings}							% Definition der Eigenen Headerformatierung
+\clearscrheadfoot 								% alle Standard-Werte und Formatierungen raus
+\automark[chapter]{section}						% Kapitel und Section als Inhalt der Variablen leftmark und rightmark
+\ohead{\pagemark}								% Seitenzahl auf äußerem Rand
+\ihead{\ifthispageodd{\leftmark}{\rightmark}} 	% Innere Überschrift mit Kapitel bei linker Seite und Section bei rechter Seite -> geht nur in Verbindung mit
+												% zweiseitigem Text wirklich sinnvoll
+\setheadsepline{0.4pt} 							% Trennlinie Fußzeile und Textkörper
+\setkomafont{pagehead}{\scshape}				% Schriftart in Kopfzeile, \scshape = Kapitelchen
+%----Fußzeile----------------------------------------------------------------------
+\setfootsepline{0.4pt} 							% Trennlinie Fußzeile und Textkörper
+\setkomafont{pagefoot}{\scshape}				% Schriftart in Fußfzeile, \scshape = Kapitelchen
+\ifoot{\footnotesize{John Doe}}
+\ofoot{\footnotesize{Master thesis}}		
+%----------------------------------------------------------------------------------
+
+\defpagestyle{myPageStyle}{
+	(0pt ,0pt)
+	{\hfill\pagemark} {\hfill\pagemark} {\hfill\pagemark}
+	(0pt ,0pt)	
+}{
+{
+	(\textwidth ,0.4pt)
+	\footnotesize{John Doe} \hfill \footnotesize{Master thesis}} 
+	{\footnotesize{John Doe} \hfill \footnotesize{Master thesis}} 
+	{\footnotesize{John Doe} \hfill \footnotesize{Master thesis}}
+	(0pt ,0pt)
+}
+
+
+%----Farbdefinition--THI-blau------------------------------------------------------
+\definecolor{haw_mag}{rgb}{0,0.112,0.47}
+\addtokomafont{section}{\color{haw_mag} \rmfamily \scshape} 
+\addtokomafont{subsection}{\color{haw_mag} \rmfamily}
+\addtokomafont{subsubsection}{\color{haw_mag} \rmfamily}
+\addtokomafont{paragraph}{\color{haw_mag} \rmfamily}
+\addtokomafont{subparagraph}{\rmfamily}
+%----------------------------------------------------------------------------------
+
+\definecolor{tab_2}{RGB}{230,230,230}
+\definecolor{tab_1}{RGB}{85,128,214}
+
+%------Längenanpassung-------------------------------------------------------------
+\setlength{\headsep}{10mm}						% Textabstand zur Kopfzeile
+\setlength{\footskip}{15mm}						% Abstand zur Fußzeile
+\setlength{\textheight}{235mm}					% Texthöhe
+%----------------------------------------------------------------------------------
+
+
+%----Glossar-----------------------------------------------------------------------
+\usepackage[toc, acronym]{glossaries} 			
+\makeglossaries	
+
+%----------------------------------------------------------------------------------
+%----Glossar-----------------------------------------------------------------------
+\usepackage[intoc]{nomencl} 
+\makenomenclature
+%----------------------------------------------------------------------------------
+
+
+
+\includeonly{	
+	titlepage,							
+	affidavit,
+	acknowledgments,
+	%abstractDE,
+	abstractEN,
+	confidentialityClause,
+	glossary,
+	mainpart,
+	%outlook,
+	%fazit,
+	nomenclature,
+	appendices
+	}
+	
+			
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------
+%----------------DOKUMENT-BEGINN---------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+	%\shorthandoff{"}						% Vermeidung von ungewollten Ligaturen/Avoid unwanted ligatures
+	
+	%----Vermeidung von Hurenkindern und Schusterjungen---------------------
+	\widowpenalty=10000
+	\clubpenalty=10000
+	\displaywidowpenalty=10000	
+	%-----------------------------------------------------------------------
+
+	%Titelseite/title page	
+	\include{titlepage}					% include erzeugt immer eine neue Seite bei jedem Einbinden
+	\cleardoublepage						% include always creates a new page
+	
+	\pagenumbering{Roman} 			% Römische Nummerierung der Kapitel/roman page numbering
+	
+	%Erklärung
+	\thispagestyle{myPageStyle}
+	\include{affidavit}
+	\cleardoublepage
+	
+	%Danksagung
+	\thispagestyle{myPageStyle}
+	\include{acknowledgments}
+	\cleardoublepage
+	
+	%Kurfassung/Abstract German (only for thesis written in German)
+	%\thispagestyle{myPageStyle}
+	%\include{abstractDE}
+	%\cleardoublepage
+	
+	%Kurzfassung/Abstract Englisch (for every thesis)
+	\thispagestyle{myPageStyle}
+	\include{abstractEN}
+	\cleardoublepage
+	
+	%Sperrvermerk/Confidentiality clause (if any)
+	\thispagestyle{myPageStyle}
+	\include{confidentialityClause}
+	\cleardoublepage
+	
+	\include{nomenclature}		
+	\printnomenclature
+	\cleardoublepage	
+	
+	\include{glossary}	
+	\printglossaries	
+	\glsaddallunused
+	\cleardoublepage
+
+	
+	%Abbildungsverzeichnis/List of figures
+	\thispagestyle{myPageStyle}
+	\renewcommand*\listfigurename{List of figures} % Remove for German thesis
+	\listoffigures
+	\cleardoublepage
+	
+	%Tabellenverzeichnis/List of tables
+	\thispagestyle{myPageStyle}
+	\renewcommand*\listtablename{List of tables} % Remove for German thesis
+	\listoftables
+	\cleardoublepage
+	
+	% Inhaltsverzeichnis
+	\thispagestyle{myPageStyle}
+	\renewcommand{\contentsname}{Table of contents} % Remove for German thesis
+	\tableofcontents
+	\cleardoublepage
+	\singlespacing
+	
+%--------------------------------------------------------------------------------	
+%------Ausarbeitung--------------------------------------------------------------
+%--------------------------------------------------------------------------------
+
+	\pagenumbering{arabic} 						% Arabische Nummerierung der Kapitel/Arabic page numbering
+	\include{mainpart}	
+
+	%\shorthandon{"}
+	
+%--------------------------------------------------------------------------------
+%-----Anhang---------------------------------------------------------------------
+%--------------------------------------------------------------------------------
+	
+	\pagenumbering{Roman} 					% Römische Nummerierung der Kapitel/Roman page numbering
+	\setcounter{page}{6} 						% Beginn bei Seitenzahl X (hier: 6) um bei oberer Nummerierung aufzuschließen/Adapt page numbering
+	
+	%Glossar/Glossary
+	\thispagestyle{myPageStyle}
+	\glssetwidest{A D A S} 						% gleicher Abstand zur 2. Spalte (längstes Wort)					
+	\setglossarystyle{alttree}																	
+	%\printglossary[title=Abkürzungsverzeichnis,toctitle=Abkürzungsverzeichnis] 	% Rename for German thesis
+	\cleardoublepage
+		
+	
+	%Literaturliste/Literature references
+	\thispagestyle{myPageStyle}
+	\bibliographystyle{plainnat}
+	%\bibliographystyle{abbrv}% changed abbrvdin to abbrv % DIN-Norm für Literaturdarstellung  plaindin 
+	%\bibliographystyle{abbrvnat}
+	\setcitestyle{authoryear, open={(}, close={)}}
+	
+	\renewcommand{\refname}{Literature references} % Remove for German thesis
+	\bibliography{literature}					% Pfad und Datei der Literaturdatenbank/Path and file name of literature references
+	\cleardoublepage	
+	
+	%Anhänge/Appendices
+	%\thispagestyle{myPageStyle} 
+	%\include{appendices}
+	%\cleardoublepage
+	
+%----------------------------------------------------------------------------------
+%----------------DOKUMENTENENDE - END OF DOCUMENT----------------------------------
+%----------------------------------------------------------------------------------
+	
+\end{document}
