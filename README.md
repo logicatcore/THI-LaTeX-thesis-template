@@ -84,3 +84,11 @@ To run it do the following-
 $> chmod +x clear_misc_files.sh
 $> ./clear_misc_files.sh
 ```
+# Credits
+I should however note that this particular $\LaTeX$ template is thanks to Prof. Dr. Andreas Riener at THI. My contributions to this particular template are-
+1. Delivering it in a working and upto-date condition
+2. Addition of **Glossary** and **Acronym** sections and the compilation command needed
+3. Bringing the **Glossary**, **Acronym**, **List of Figures**, and **List of Tables** sections to the beginning of the document
+4. Usage instruuctions i.e. this README file
+
+If any questions arrise, please do not hesitate to create an issue and I will try my best to help you!
