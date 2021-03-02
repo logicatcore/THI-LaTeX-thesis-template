@@ -80,10 +80,12 @@ So, if you ever face the following situation I suggest you to run the **clear_mi
 removes all the auxilliary files and hence force LaTeX to compile all of them again.
 
 To run it do the following-
+1. On Linux based machines
 ```bash
 $> chmod +x clear_misc_files.sh
 $> ./clear_misc_files.sh
 ```
+2. On Windows based machines - Just double click the **clear_misc_files.bat** file to run the command which deletes all the irrelevant files
 # Credits
 I should however note that this particular $\LaTeX$ template is thanks to Prof. Dr. Andreas Riener at THI. My contributions to this particular template are-
 1. Delivering it in a working and upto-date condition
