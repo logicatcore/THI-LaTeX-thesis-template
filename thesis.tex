@@ -56,75 +56,14 @@
 \usepackage{colortbl}
 
 %----------------------------------------------------------------------------------
-% my addition----------------------------------------------------------------------
-%----------------------------------------------------------------------------------
-\usepackage{chngcntr}
-\counterwithin{figure}{section}
-
-\usepackage{amsmath}
-
-\usepackage{listings}
-\usepackage{xcolor}
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
-}
-
-\lstset{style=mystyle}
-
-\usepackage{pgf,tikz} % for drawing simple line charts
-\usepackage{breqn}
-
-\usepackage[edges]{forest}
-\usetikzlibrary{arrows.meta}
-
-\usetikzlibrary{shapes.geometric, arrows}
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text width=2.5cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
-\tikzstyle{process} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=4.75cm, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=2.2cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=green!30]
-
-% additional packages can be locally accessed just by downloading the library files
-%\usepackage{./packages/algorithms/algorithm}
-%\usepackage{./packages/algorithms/algorithmic}
-
-\newcommand{\algorithmautorefname}{Algorithm}
-\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
-
-\usepackage{multirow}
-\usepackage{subfig}
-\usepackage{adjustbox}
-\usepackage{epigraph}
-
-%----------------------------------------------------------------------------------
 %----Kopfzeile---------------------------------------------------------------------
 %----------------------------------------------------------------------------------
 
-\usepackage{scrpage2} 							% Aufruf KOMA-Skript für Kopfzeilen
+\usepackage{scrlayer-scrpage} 							% Aufruf KOMA-Skript für Kopfzeilen
 
 \pagestyle{scrheadings}							% Definition der Eigenen Headerformatierung
 \clearscrheadfoot 								% alle Standard-Werte und Formatierungen raus
-\automark[chapter]{section}						% Kapitel und Section als Inhalt der Variablen leftmark und rightmark
+%\automark[chapter]{section}						% Kapitel und Section als Inhalt der Variablen leftmark und rightmark
 \ohead{\pagemark}								% Seitenzahl auf äußerem Rand
 \ihead{\ifthispageodd{\leftmark}{\rightmark}} 	% Innere Überschrift mit Kapitel bei linker Seite und Section bei rechter Seite -> geht nur in Verbindung mit
 												% zweiseitigem Text wirklich sinnvoll
