@@ -22,6 +22,12 @@ I myself have written my thesis report on Linux OS for which the TexMaker app is
 app-store. But, the app is also available for Windows and MacOsX OS's, so, that is comfortable if you want to follow some
  additional information that follows here regarding setup across any operating systems.
 
+## IDE is not all that is needed
+TexMaker here is just an IDE (Integrated Digital Environment) that helps us create and work with latex documents. To actually install latex i.e. get the required libraries we need to install them. This installation process is different for windows and linux, so choose one below-
+
+1. If you are going to work on a Windows machine, all you need to do is install [MikTex](https://miktex.org/howto/install-miktex)
+2. If you are going to work on a Ubuntu machine, you can install latex libraries by following this [article](https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux)
+---
 To get started, clone this repository to have it locally available for your use or if you are okay with having your report
 online publically available, you can fork this repository and work upon it.
 
