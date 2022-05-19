@@ -59,21 +59,22 @@
 %----Kopfzeile---------------------------------------------------------------------
 %----------------------------------------------------------------------------------
 
-\usepackage{scrlayer-scrpage} 							% Aufruf KOMA-Skript für Kopfzeilen
+\usepackage[headsepline=0.4pt, footsepline=0.4pt]{scrlayer-scrpage} 							% Aufruf KOMA-Skript für Kopfzeilen
 
 \pagestyle{scrheadings}							% Definition der Eigenen Headerformatierung
-\clearscrheadfoot 								% alle Standard-Werte und Formatierungen raus
-%\automark[chapter]{section}						% Kapitel und Section als Inhalt der Variablen leftmark und rightmark
+%\clearscrheadfoot 								% alle Standard-Werte und Formatierungen raus#
+\clearpairofpagestyles
+%\automark[chapter]{section}					% Kapitel und Section als Inhalt der Variablen leftmark und rightmark
 \ohead{\pagemark}								% Seitenzahl auf äußerem Rand
 \ihead{\ifthispageodd{\leftmark}{\rightmark}} 	% Innere Überschrift mit Kapitel bei linker Seite und Section bei rechter Seite -> geht nur in Verbindung mit
 												% zweiseitigem Text wirklich sinnvoll
-\setheadsepline{0.4pt} 							% Trennlinie Fußzeile und Textkörper
-\setkomafont{pagehead}{\scshape}				% Schriftart in Kopfzeile, \scshape = Kapitelchen
+%\setheadsepline{0.4pt}							% Trennlinie Fußzeile und Textkörper - DEPRICATED!!!
+\setkomafont{headsepline}{\scshape}				% Schriftart in Kopfzeile, \scshape = Kapitelchen
 %----Fußzeile----------------------------------------------------------------------
-\setfootsepline{0.4pt} 							% Trennlinie Fußzeile und Textkörper
+%\setfootsepline{0.4pt} 						% Trennlinie Fußzeile und Textkörper - DEPRICATED!!!!
 \setkomafont{pagefoot}{\scshape}				% Schriftart in Fußfzeile, \scshape = Kapitelchen
 \ifoot{\footnotesize{John Doe}}
-\ofoot{\footnotesize{Master thesis}}		
+\ofoot{\footnotesize{Master thesis}}				
 %----------------------------------------------------------------------------------
 
 \defpagestyle{myPageStyle}{
